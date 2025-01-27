@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ project.pavadinimas }}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block content %}
+
 <h4>{{ project.pavadinimas }}</h4>
 <p>id: {{ project.id }}.</p>
 <p>kaina: {{ project.kaina }}</p>
 <p>kaina su pvm: {{ project.kaina_su_pvm }}</p>
 <p>sukūrimo data: {{ project.sukurimo_data }}</p>
 <p><a href="/">Grįžti į pagrindinį</a></p>
-</body>
-</html>
+{% endblock %}

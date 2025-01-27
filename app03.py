@@ -23,12 +23,12 @@ def home():
         filtered_rows = (Projektas.query.filter
                          (Projektas.pavadinimas.ilike(f"%{search_text}%")))
         return (render_template
-                ("index_css.html", projects=filtered_rows))
+                ("index.html", projects=filtered_rows))
 
     else:
         all_projects = Projektas.query.all()  # flask-SQLalchemy
         return (render_template
-                ("index_css.html", projects=all_projects))
+                ("index.html", projects=all_projects))
 
 
 @app.route("/projektas/<int:row_id>")
