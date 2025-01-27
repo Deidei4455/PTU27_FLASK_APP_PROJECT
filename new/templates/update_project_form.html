@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ project.pavadinimas }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<h4>Projekto {{ project.pavadinimas }} redagavimas</h4>
+<form action="" method="post">
+  <p>Projekto pavadinimas</p>
+  <p><input type="text" value="{{project.pavadinimas}}" name="namelaukelis"></p>
+  <p>Projekto kaina:</p>
+  <p><input type="text" value="{{ project.kaina }}" name="kainalaukelis"></p>
+  <p><input type="submit" value="išsaugoti"></p>
+</form>
+
+</body>
+</html>
